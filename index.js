@@ -62,7 +62,6 @@ P.all([getSubredditName('popular', _.random(10)), getRick()])
   if (_.random()) status = status.toUpperCase();
   return status;
 })
-.tap(console.log)
 .then(status => REST.post('statuses/update', {status: status}))
 .then(res => {
   console.log(`SUBRICK twote:\n${res.data.id_str}, ${res.data.text}`);
