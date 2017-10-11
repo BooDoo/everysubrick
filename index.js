@@ -25,9 +25,8 @@ function getNextPage(endpoint) {
   });
 }
 
-function getPagedUrl(endpoint, n, limit=100) {
-  return P.reduce(new Array(n), (newest, nextPage)=> {return getNextPage(newest); }, endpoint);
-  while (n-- >= 0) promise = promise.then(getNextPage(endpoint));
+function getPagedUrl(endpoint, n) {
+  return P.reduce(new Array(n), newest => getNextPage(newest), endpoint);
 }
 
 function getSubreddits(type='popular', page=0, limit=100) {
@@ -57,7 +56,6 @@ function getRick() {
 
 P.all([getSubredditName('popular', _.random(10)), getRick()])
 .spread((subreddit, rick) => {
-  // pick one from each pool of related words and put it in the snowclone
   let status = `i'm ${subreddit} ${rick}`;
   if (_.random()) status = status.toUpperCase();
   return status;
