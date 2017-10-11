@@ -1,0 +1,30 @@
+{
+  "name": "everysubrick",
+  "version": "0.6.9",
+  "description": "this twitter bot sucks, morty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BooDoo/everysubrick.git"
+  },
+  "keywords": [
+    "twitter",
+    "reddit"
+  ],
+  "author": "BooDoo <joelmccoy+github@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BooDoo/everysubrick/issues"
+  },
+  "homepage": "https://github.com/BooDoo/everysubrick#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "lodash": "^4.17.4",
+    "mersenne-twister": "^1.1.0",
+    "request": "^2.83.0",
+    "twit": "^2.2.9"
+  }
+}
